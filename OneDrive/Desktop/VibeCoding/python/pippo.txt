@@ -1,0 +1,3 @@
+Ciao a tutti, sono Pippo!
+Sono un Web Developer.
+Sto studiando Python!

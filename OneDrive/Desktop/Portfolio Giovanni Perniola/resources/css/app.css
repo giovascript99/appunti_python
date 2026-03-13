@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* Dark mode via class strategy (Tailwind v4) */
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-sans: 'Inter', 'SF Pro Display', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply antialiased bg-white text-neutral-800 transition-colors duration-300;
+    }
+
+    .dark body {
+        @apply bg-neutral-950 text-neutral-200;
+    }
+}
